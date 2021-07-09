@@ -25,5 +25,5 @@ jobs:
         id: bumpversion
         uses: ./actions/bump-version
         with:
-          repository: hellofresh/remote-config-service
+          repository: s4nji/vers
           access_token: ${{ secrets.GITHUB_TOKEN }}
