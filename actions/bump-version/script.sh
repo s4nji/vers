@@ -17,4 +17,4 @@ NEW_TAG="$(semver bump $BUMP $LATEST_TAG)"
 
 echo "::set-output name=version::$(echo $NEW_TAG)"
 
-release "$NEW_TAG"
+create_release "$NEW_TAG"
