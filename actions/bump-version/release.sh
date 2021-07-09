@@ -2,7 +2,7 @@
 set -e
 
 function tag_or_release() {
-  if [ "$INPUT_TAG_ONLY" = "" ]; then
+  if [ "$INPUT_TAG_ONLY" = "true" ]; then
     git tag "$1"
     git push origin --tags
   else
