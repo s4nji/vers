@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 SCRIPT_DIR=$(dirname "$0")
 source "${SCRIPT_DIR}/semver.sh"
