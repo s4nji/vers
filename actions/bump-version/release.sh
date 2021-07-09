@@ -6,6 +6,7 @@ function tag_or_release() {
     git tag "$1"
     git push origin --tags
   else
+    export GITHUB_TOKEN="$INPUT_ACCESS_TOKEN"
     gh release create "$1"
   fi
 }
