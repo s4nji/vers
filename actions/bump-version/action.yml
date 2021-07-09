@@ -10,6 +10,10 @@ inputs:
   initial_version:
     required: false
     default: "0.0.0"
+  tag_only:
+    description: "Create only git tags without github releases"
+    required: false
+    default: false
 outputs:
   new_version:
     description: "New generated version"
