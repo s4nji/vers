@@ -27,3 +27,4 @@ jobs:
         with:
           repository: s4nji/vers
           access_token: ${{ secrets.GITHUB_TOKEN }}
+          tag_only: true
