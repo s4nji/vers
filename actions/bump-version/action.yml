@@ -18,5 +18,5 @@ runs:
   using: "composite"
   steps:
     - id: bump-version
-      run: ./ci/actions/bump-version/script.sh "${{ inputs.repository }}" "${{ inputs.access_token }}" "${{ inputs.initial_version }}"
+      run: ./actions/bump-version/script.sh "${{ inputs.repository }}" "${{ inputs.access_token }}" "${{ inputs.initial_version }}"
       shell: bash
