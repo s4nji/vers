@@ -5,8 +5,7 @@ git describe --abbrev=0 --tags
 
 function get_bump_type() {
     # Get the last commit
-    # LAST_COMMIT=$(git log -n 1 --format='%H')
-    LAST_COMMIT="89d9d20e2471a37dc304da9607dc2eebd55f2057"
+    LAST_COMMIT=$(git log -n 1 --format='%H')
 
     GITHUB_OWNER=$(echo ${INPUT_REPOSITORY} | cut -d"/" -f1)
     GITHUB_REPO=$(echo ${INPUT_REPOSITORY} | cut -d"/" -f2)
