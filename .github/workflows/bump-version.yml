@@ -23,7 +23,10 @@ jobs:
       - name: Send Slack message
         uses: slackapi/slack-github-action@v1.16.0
         with:
-          slack-message: Test from GA
+          payload: >
+            {
+              "text": "Test Message from GA"
+            }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
