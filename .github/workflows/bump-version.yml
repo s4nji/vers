@@ -20,11 +20,20 @@ jobs:
           # Checkout pull request HEAD commit instead of merge commit
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - if: ${{ github.ref == 'refs/heads/master' }}
-        name: Bump version
-        id: bumpversion
-        uses: ./actions/bump-version
+      - name: Send Slack message
+        uses: slackapi/slack-github-action@v1.16.0
         with:
-          repository: s4nji/vers
-          access_token: ${{ secrets.GITHUB_TOKEN }}
-          tag_only: false
+          channel-id: C01EJPUFMFT
+          slack-message: Test!
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+
+
+      # - if: ${{ github.ref == 'refs/heads/master' }}
+      #   name: Bump version
+      #   id: bumpversion
+      #   uses: ./actions/bump-version
+      #   with:
+      #     repository: s4nji/vers
+      #     access_token: ${{ secrets.GITHUB_TOKEN }}
+      #     tag_only: false
