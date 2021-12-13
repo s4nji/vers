@@ -1,0 +1,21 @@
+name: "Release Workflow"
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  release-workflow:
+    name: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Dummy Action
+        run: |
+          echo zzz
+          sleep 3
+          echo !!!
+
